@@ -1,0 +1,23 @@
+/* 1. Reset browser default margins to prevent gaps around the bar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fffbed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.top-bar {
+    width: 100%;
+    background-color: #627444;
+    color: #fffbed;
+    padding: 25px 10px;
+    text-align: center;
+}
+
+.main-content {
+    padding: 40px;
+}
