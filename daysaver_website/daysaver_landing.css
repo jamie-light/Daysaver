@@ -1,23 +1,210 @@
-/* 1. Reset browser default margins to prevent gaps around the bar */
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: #fffbed;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .top-bar {
     width: 100%;
+    height: 60px;
     background-color: #627444;
     color: #fffbed;
-    padding: 25px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    padding-right: 30px; 
+}
+
+.nav-btn {
+    color: #fffbed;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 20px;
+    border-radius: 4px;
+    background-color: transparent;
+    display: inline-block;
+    transition: none;
+}
+
+.nav-btn:hover {
+    background-color: #7a9155; 
+    color: #fffbed;
+}
+f
+.nav-btn:active {
+    background-color: #44512f;
+}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: #627444;
+    color: #fffbed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.page-container {
+    width: 100%;
+}
+
+.page {
+    height: calc(100vh - 60px);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Page One */
+.page-one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 2.0rem;
+    font-weight: 800;
+    color: #161a2d;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circle {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fffbed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-green {
+    background-color: #627444;
+    color: #fffbed;
+    border: none;
+    padding: 12px 45px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover effect for button */
+.btn-green:hover {
+    background-color: #7a9155; 
+}
+
+/* On-click button effect */
+.btn-green:active {
+    background-color: #44512f;
+    transform: scale(0.97); 
+}
+
+.placeholder-text-p1 {
+    font-size: 1.5rem;
+    color: #161a2d;
+}
+
+/* Page 2 */
+.page-two {
+    display: flex;
+    align-items: stretch;
+}
+
+.pg2-left-text-column {
+    width: 20%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #161a2d;
+}
+
+.pg2-right-grid {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+}
+
+.box {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
     text-align: center;
 }
 
-.main-content {
-    padding: 40px;
+.box-icon {
+    font-size: 4rem;
+    margin-bottom: auto;
+}
+
+.box .box-title {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 8px; 
+}
+
+.box-desc {
+    font-size: 1rem;
+    margin: 0;
+    max-width: 80%;
+    opacity: 0.85;
+}
+
+.box-yellow {
+    background-color: #ffde00;
+    color: #161a2d;
+}
+
+.box-black {
+    background-color: #44512f;
+    color: #fffbed;
+}
+
+.material-symbols-outlined {
+    font-size: 10rem !important;
+    margin-bottom: 20px;
+}
+
+.box span {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-top: 0;
 }

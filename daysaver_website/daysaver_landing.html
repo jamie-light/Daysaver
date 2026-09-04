@@ -4,17 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daysaver</title>
+    <link 
+      rel="stylesheet" 
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="daysaver_landing.css">
+    <link rel="stylesheet" href="daysaver_landing.css" />
 </head>
 <body>
-   <div class="top-bar">
-        <p>Placeholder</p>
+
+    <div class="top-bar">
+        <div class="nav-links">
+            <a href="daysaver_loginpage.html" class="nav-btn">Login</a>
+            <a href="daysaver_signuppage.html" class="nav-btn">Sign Up</a>
+        </div>
     </div>
 
-    <main class="main-content">
-        <h1>Daysaver</h1>
-        <p>The best way to save money each and every day.</p>
-    </main>
+
+    <div class="page-container">
+        
+         <!-- PAGE 1 -->
+        <section class="page page-one">
+            <div class="hero-content">
+                <h1 class="hero-title">A free way to save money every day</h1> 
+                
+                <div class="logo-circle">
+                    <img src="daysaver_images/daysaverlogo.png" alt="Daysaver Logo">
+                </div>
+                <a href="daysaver_signuppage.html" style="text-decoration: none;">
+                    <button class="btn-green">Get started</button>
+                </a>
+                
+                <p class="placeholder-text-p1">More information below!</p>
+            </div>
+        </section>
+
+        <!-- PAGE 2 -->
+        <section class="page page-two">
+            <div class="pg2-left-text-column">
+                <p>Features of Daysaver</p>
+            </div>
+            
+            <div class="pg2-right-grid">
+                <!-- Box 1 -->
+                <div class="box box-yellow">
+                    <span class="material-symbols-outlined box-icon">home</span>
+                    <span class="box-title">Dashboard</span>
+                    <p class="box-desc">Everything you need all in one place. With one click of a button you can track your spendings and stipends.</p>
+                </div>
+                <!-- Box 2 -->
+                <div class="box box-black">
+                    <span class="material-symbols-outlined box-icon">addchart</span>
+                    <span class="box-title">Tracking</span>
+                    <p class="box-desc">Log every spending, stipend and paycheck quickly and simply.</p>
+                </div>
+                <!-- Box 3 -->
+                <div class="box box-black">
+                    <span class="material-symbols-outlined box-icon">overview</span>
+                    <span class="box-title">Transactions</span>
+                    <p class="box-desc">All your tracked earnings and spendings together.</p>
+                </div>
+                <!-- Box 4 -->
+                <div class="box box-yellow">
+                    <span class="material-symbols-outlined box-icon">money_off</span>
+                    <span class="box-title">Free</span>
+                    <p class="box-desc">Daysaver is 100% free to use with no strings attached.</p>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <div class="footer">
+        <p>© Jamie Liu 2026</p>
+    </div>
+
 </body>
 </html>
