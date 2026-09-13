@@ -21,7 +21,7 @@ body {
     border-radius: 15px; 
     padding: 20px; 
     width: 100%;
-    max-width: 350px; /* Controls how wide the entire form area is */
+    max-width: 350px;
     box-sizing: border-box;
 }
 
