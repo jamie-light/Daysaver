@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daysaver | Dashboard</title>
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="daysaver_dashboard.css" />
   </head>
   <body>
     <aside class="sidebar">
       <div class="sidebar-header">
-        <img src="/daysaver_images/daysaverlogo.png" alt="" />
+        <img src="/daysaver_images/daysaverlogo.png" alt="Daysaver Logo" onerror="this.onerror=null; this.src='https://placehold.co/42x42/627444/fffbed?text=DS';" />
         <h2>Daysaver</h2>
       </div>
       <ul class="sidebar-links">
@@ -22,8 +25,10 @@
           <div class="menu-separator"></div>
         </h4>
         <li>
-          <a href="/dashboard">
-            <span class="material-symbols-outlined"> dashboard </span> Dashboard </a>
+          <a href="/dashboard" class="active">
+            <span class="material-symbols-outlined"> dashboard </span>
+            Dashboard
+          </a>
         </li>
         <h4>
           <span>Finance</span>
@@ -31,11 +36,15 @@
         </h4>
         <li>
           <a href="/tracking">
-            <span class="material-symbols-outlined"> addchart </span> Tracking </a>
+            <span class="material-symbols-outlined"> addchart </span>
+            Tracking
+          </a>
         </li>
         <li>
           <a href="/transactions">
-            <span class="material-symbols-outlined"> overview </span> Transactions </a>
+            <span class="material-symbols-outlined"> overview </span>
+            Transactions
+          </a>
         </li>
         <h4>
           <span>Account</span>
@@ -43,9 +52,61 @@
         </h4>
         <li>
           <a href="/logout">
-            <span class="material-symbols-outlined"> logout </span> Logout </a>
+            <span class="material-symbols-outlined"> logout </span>
+            Logout
+          </a>
         </li>
       </ul>
     </aside>
+
+    <main class="main-content">
+      <div class="dashboard-card">
+        <div class="card-header">
+          <h1>Welcome back!</h1>
+          <p class="subtitle">Overview of your most recent transactions.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="table-container">
+          <table class="transaction-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Transaction Name</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>% of Daily Wage</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for tx in recent_transactions[:3] %}
+              <tr>
+                <td class="tx-date">{{ tx.date }}</td>
+                <td class="tx-name">{{ tx.name }}</td>
+                <td class="tx-type">
+                  <span class="type-badge {{ tx.type | lower }}">{{ tx.type }}</span>
+                </td>
+                <td class="tx-amount {% if tx.type | lower == 'spending' or tx.amount < 0 %}amount-negative{% else %}amount-positive{% endif %}">
+                  {% if tx.type | lower == 'spending' or tx.amount < 0 %}
+                    -${{ "%.2f"|format(tx.amount|abs) }}
+                  {% else %}
+                    +${{ "%.2f"|format(tx.amount) }}
+                  {% endif %}
+                </td>
+                <td class="tx-percentage">{{ "%.1f"|format(tx.percentage) }}%</td>
+              </tr>
+              {% else %}
+              <tr>
+                <td colspan="5" class="empty-state">
+                  No transactions tracked yet. Log transactions in the tracking tab.
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,0 +1,152 @@
+.main-content {
+margin-left: 105px;
+padding: 40px 30px;
+min-height: 100vh;
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+transition: margin-left 0.4s ease;
+}
+
+.dashboard-card {
+background: #ffffff;
+border-radius: 12px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+padding: 35px 40px;
+width: 100%;
+max-width: 1100px;
+border: 1px solid rgba(98, 116, 68, 0.08);
+}
+
+.card-header h1 {
+color: #4A5A30;
+font-size: 1.85rem;
+font-weight: 700;
+margin-bottom: 6px;
+letter-spacing: -0.2px;
+}
+
+.card-header .subtitle {
+color: #727a68;
+font-size: 0.95rem;
+font-weight: 400;
+}
+
+.divider {
+height: 1px;
+background-color: #e5e7eb;
+margin: 22px 0 28px 0;
+}
+
+.table-container {
+overflow-x: auto;
+border-radius: 8px;
+}
+
+.transaction-table {
+width: 100%;
+border-collapse: separate;
+border-spacing: 0;
+text-align: left;
+}
+
+.transaction-table th {
+background-color: #627444;
+color: #ffffff;
+padding: 14px 20px;
+font-size: 0.95rem;
+font-weight: 600;
+letter-spacing: 0.2px;
+}
+
+.transaction-table th:first-child {
+border-top-left-radius: 8px;
+}
+
+.transaction-table th:last-child {
+border-top-right-radius: 8px;
+}
+
+.transaction-table td {
+padding: 16px 20px;
+font-size: 0.925rem;
+color: #333333;
+border-bottom: 1px solid #f0f0f0;
+vertical-align: middle;
+}
+
+.transaction-table tbody tr:last-child td {
+border-bottom: none;
+}
+
+.transaction-table tbody tr {
+transition: background-color 0.15s ease;
+}
+
+.transaction-table tbody tr:hover {
+background-color: #fcfdf8;
+}
+
+.tx-date {
+color: #4b5563;
+font-weight: 400;
+white-space: nowrap;
+}
+
+.tx-name {
+font-weight: 600;
+color: #2b331f;
+}
+
+.type-badge {
+display: inline-block;
+padding: 4px 10px;
+border-radius: 6px;
+font-size: 0.775rem;
+font-weight: 600;
+text-transform: capitalize;
+}
+
+.type-badge.spending {
+background-color: #fde8e8;
+color: #e02424;
+}
+
+.type-badge.savings,
+.type-badge.income {
+background-color: #e1f5fe;
+color: #0288d1;
+}
+
+.tx-amount {
+font-weight: 700;
+white-space: nowrap;
+}
+
+.amount-negative {
+color: #e02424;
+}
+
+.amount-positive {
+color: #10b981;
+}
+
+.tx-percentage {
+color: #4b5563;
+font-weight: 500;
+}
+
+.empty-state {
+text-align: center;
+color: #6b7280;
+padding: 30px !important;
+font-style: italic;
+}
+.dashboard-card {
+padding: 20px;
+}
+.transaction-table th,
+.transaction-table td {
+padding: 10px 12px;
+font-size: 0.85rem;
+}
